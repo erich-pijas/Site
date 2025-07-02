@@ -4,6 +4,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 header input{
@@ -25,6 +26,7 @@ nav{
     display: flex;
     justify-content: center;
     padding: 0 10px;
+    flex-wrap: wrap;
 }
 
 nav a{
@@ -50,4 +52,102 @@ nav a:hover{
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
+}
+
+.bodysobre {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+  background: #fff;
+}
+
+.intro {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #d7e3fc, #c6b8f2);
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6em;
+}
+
+.dupla {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px; /* espaço entre blocos */
+}
+
+.imagem-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.imagemBack {
+  flex: 1;
+  min-height: 400px;
+  background: url('img/controle.jpg') center center / cover no-repeat;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+/*
+A linha:
+background: url('img/controle.jpg') center center / cover no-repeat;
+
+Corresponde à:
+background-image	: imagem de fundo
+background-position: posição horizontal
+background-size: tamanho da imagem
+background-repeat: não repetir a imagem
+*/
+.texto {
+  flex: 1;
+  background: #f8f2ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-size: 1.5em;
+  color: #758686;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .dupla {
+    flex-direction: column; /* empilha os elementos */
+  }
+  .imagem-container,
+  .imagemBack {
+    min-height: 250px;
+    max-height: 250px;
+  }
+  .texto {
+    padding: 20px;
+    font-size: 1.2em;
+  }
+}
+
+.dupla:last-of-type {
+  margin-bottom: 0;
 }
